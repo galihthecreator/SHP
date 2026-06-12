@@ -66,7 +66,15 @@ analyze_btn = st.sidebar.button("Analisis Kesesuaian Lahan")
 # MAIN CANVAS: HASIL & ANALISIS
 # ==========================================
 st.title("Sistem Rekomendasi Komoditas Pertanian")
-st.markdown("Masukkan parameter bio-fisik lahan pada panel di sebelah kiri untuk mendapatkan rekomendasi komoditas berbasis algoritma klasifikasi *Ensemble Learning*.")
+# Hapus st.title() dan st.markdown() bawaan, ganti dengan injeksi HTML Absolut
+st.markdown(
+    """
+    <p style='color: #271C19; font-size: 1.1rem; line-height: 1.6; margin-top: 10px;'>
+        Masukkan parameter bio-fisik lahan pada panel di sebelah kiri untuk mendapatkan rekomendasi komoditas berbasis algoritma klasifikasi <em>Ensemble Learning</em>.
+    </p>
+    """, 
+    unsafe_allow_html=True
+)
 
 st.markdown("---")
 
