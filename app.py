@@ -82,7 +82,12 @@ if analyze_btn:
     c3, p3 = kelas_tanaman[top_3_idx[2]].capitalize(), probabilitas[top_3_idx[2]] * 100
     
     # 5. Injeksi variabel dinamis ke dalam UI menggunakan f-string (format string)
-    st.subheader("Hasil Rekomendasi Klasifikasi")
+    st.markdown(
+    """
+    <h3 style='color: #000000; font-weight: 600; margin-top: 20px; margin-bottom: 15px;'>
+        Hasil Rekomendasi Klasifikasi
+    </h3>
+    """, unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
     
     with col1:
@@ -104,5 +109,10 @@ if analyze_btn:
         st.progress(int(p3))
 
     st.markdown("---")
-    st.subheader("Logika Inferensi Model")
+    st.markdown(
+    """
+    <h3 style='color: #000000; font-weight: 600; margin-top: 20px; margin-bottom: 15px;'>
+        Logika Inferensi Model
+    </h3>
+    """, unsafe_allow_html=True)
     st.info(f"Berdasarkan probabilitas {p1:.1f}%, algoritma ensemble menetapkan **{c1}** sebagai kecocokan tertinggi untuk profil lahan dengan Curah Hujan {rain_val} mm, Kelembapan {hum_val}%, dan keseimbangan hara NPK terdeteksi.")
