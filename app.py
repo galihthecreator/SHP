@@ -10,7 +10,7 @@ import joblib
 def load_ai_components():
     # Pastikan nama file ini sama persis dengan yang ada di foldermu/GitHub
     loaded_model = joblib.load('best_random_forest.pkl')
-    loaded_scaler = joblib.load('scaler_crop_2.pkl')
+    loaded_scaler = joblib.load('scaler_crop.pkl')
     return loaded_model, loaded_scaler
 
 model, scaler = load_ai_components()
