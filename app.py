@@ -67,11 +67,11 @@ if analyze_btn:
     # 1. Agregasi input dari slider menjadi matriks 2D (Sesuai urutan fitur saat training)
     input_data = np.array([[n_val, p_val, k_val, temp_val, hum_val, ph_val, rain_val]])
     
-    # 2. Transformasi skala menggunakan Scaler historis
-    input_scaled = scaler.transform(input_data)
+    # # 2. Transformasi skala menggunakan Scaler historis
+    # input_scaled = scaler.transform(input_data)
     
     # 3. Eksekusi probabilitas model Random Forest
-    probabilitas = model.predict_proba(input_scaled)[0]
+    probabilitas = model.predict_proba(input_data)[0]
     kelas_tanaman = model.classes_
     
     # 4. Ekstraksi Top 3 Prediksi
