@@ -9,8 +9,8 @@ import joblib
 @st.cache_resource
 def load_ai_components():
     # Pastikan nama file ini sama persis dengan yang ada di foldermu/GitHub
-    loaded_model = joblib.load('model_rf_crop.pkl')
-    loaded_scaler = joblib.load('scaler_crop.pkl')
+    loaded_model = joblib.load('best_random_forest.pkl')
+    loaded_scaler = joblib.load('scaler_crop_2.pkl')
     return loaded_model, loaded_scaler
 
 model, scaler = load_ai_components()
@@ -57,7 +57,7 @@ st.markdown(
     """
     <h1 style='color: #1A1A1A; font-weight: 800; margin-bottom: 0px;'>Sistem Rekomendasi Komoditas Pertanian</h1>
     <p style='color: #271C19; font-size: 1.1rem; line-height: 1.6; margin-top: 10px;'>
-        Masukkan parameter bio-fisik lahan pada panel di sebelah kiri untuk mendapatkan rekomendasi komoditas berbasis algoritma klasifikasi <em>Ensemble Learning</em>.
+        Masukkan parameter bio-fisik lahan pada panel di sebelah kiri untuk mendapatkan rekomendasi komoditas berbasis algoritma klasifikasi <em>Random Forest</em>.
     </p>
     """, unsafe_allow_html=True
 )
